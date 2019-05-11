@@ -24,7 +24,7 @@ function clickStar(id) {
 function sendStar(id, state) {
     $.ajax({
         type: 'post',
-        url: '/favourites',
+        url: 'http://spinachnow.com:8081/favourites',
         data: {
             index: id,
             state: state

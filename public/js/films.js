@@ -39,7 +39,7 @@ function searchInput() {
     filmSize += iterator;
     $.ajax({
         type: "post",
-        url: '/search',
+        url: 'http://spinachnow.com:8081/search',
         data: {
             size: filmSize,
             query: value
@@ -62,7 +62,7 @@ function favourites() {
 function getTags() {
     $.ajax({
         type: 'get',
-        url: '/tags'
+        url: 'http://spinachnow.com:8081/tags'
         //data: {}
     }).done(function (data) {
         for (let i = 0; i < data.length; i++) {
@@ -87,7 +87,7 @@ function sendTags() {
     filmSize += iterator;
     $.ajax({
         type: 'post',
-        url: '/searchTags',
+        url: 'http://spinachnow.com:8081/searchTags',
         data: {
             tags: tags,
             size: filmSize
@@ -167,7 +167,7 @@ function getFilms() {
     filmSize += iterator;
     $.ajax({
         type: 'get',
-        url: '/filmsAndFavourites',
+        url: 'http://spinachnow.com:8081/filmsAndFavourites',
         data: {
             size: filmSize
         }
@@ -220,7 +220,7 @@ function getFavourites() {
     favouriteSize += iterator;
     $.ajax({
         type: 'get',
-        url: '/filmsAndOnlyFavourites',
+        url: 'http://spinachnow.com:8081/filmsAndOnlyFavourites',
         data: {
             size: favouriteSize
         }
