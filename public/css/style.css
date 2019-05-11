@@ -1,0 +1,9 @@
+.interval {
+    margin-top: 20px
+}
+.interval-bot {
+    margin-bottom: 20px
+}
+.clickable {
+    cursor: pointer;
+}
